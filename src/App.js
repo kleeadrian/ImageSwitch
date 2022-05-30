@@ -28,7 +28,7 @@ function App() {
 }
 // export default App
 export default withLDProvider({
-  clientSideID: '629014775d60f615a7ff4a9f',
+  clientSideID: 'Input your SDK Key',
   options: {
     bootstrap:'localStorage'
     }})(App);
