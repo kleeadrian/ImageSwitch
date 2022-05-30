@@ -1,11 +1,16 @@
 import logo from './logo.svg';
+import CoffeeLogo from "./ldwhite.png"
 import './App.css';
+import { withLDProvider, useFlags } from 'launchdarkly-react-client-sdk'; 
 
 function App() {
+  const {imageSwitch} = useFlags()
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        { imageSwitch ? (<img src={CoffeeLogo} className="App-logo" alt="logo" />) : (
+        <img src={logo} className="App-logo" alt="logo" />) 
+}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -21,5 +26,9 @@ function App() {
     </div>
   );
 }
-
-export default App;
+// export default App
+export default withLDProvider({
+  clientSideID: '629014775d60f615a7ff4a9f',
+  options: {
+    bootstrap:'localStorage'
+    }})(App);
