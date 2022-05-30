@@ -3,7 +3,10 @@
 This React.js application switches the logo between the React.Js logo and the LaunchDarkly Logo via a feature flag configuration. This is to demonstrate how LaunchDarkly Feature flags are utilised.
 
 
-To get started, Clone this repo and Input your Launchdarkly SDK key on Line 31 in src/app.js(https://docs.launchdarkly.com/home/getting-started/setting-up) 
+To get started, Clone this repo and Input your Launchdarkly SDK key on Line 31 in src/app.js 
+
+Instructions: https://docs.launchdarkly.com/home/getting-started/setting-up) 
+
 Select Client-Side SDK as your feature flag
 ## Available Scripts
 
